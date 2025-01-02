@@ -1,0 +1,138 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600;700&family=Lato:wght@700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&display=swap'); */
+
+@font-face {
+    font-family: InterTight;
+    src: url(/fonts/InterTight.ttf);
+}
+@font-face {
+    font-family: Futura;
+    src: url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600;700&family=Lato:wght@700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&display=swap');
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --black: 0 0 0;
+        --white: 255 255 255;
+        --background: 26 26 26;
+        --foreground: 31 31 36;
+        --section: 49 51 57;
+        --primary-blue: 43 130 207;
+        --primary-orange: 192 104 0;
+        --primary-green: 135 197 92;
+        --secondary-green: 88 213 1;
+        --primary-yellow: 255 214 67;
+        --social-background: 8 96 198;
+        --nav-hover: 109 109 117;
+        --skin-shad: 76 75 75;
+        --red-tag: 192 0 0;
+        --blue-dark: 8 95 198;
+        --blue-light: 56 157 246;
+
+        scrollbar-color: var(--foreground) transparent !important;
+		scrollbar-width: thin;
+    }
+
+    ::-webkit-scrollbar {
+		width: 6px;
+		height: 6px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+		/* background: var(--background); */
+        box-shadow: inset 0 0 5px red !important;
+		border-radius: 10px;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: var(--foreground);
+		border-radius: 10px;
+	}
+
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: var(--primary-blue);
+	}
+
+    .title-gradient {
+        background: linear-gradient(
+            90deg,
+            #277dca -4.6%,
+            #459fee 47.13%,
+            #74bf73 91.95%,
+            #b9d31e 113.46%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .background-gradient {
+        background: linear-gradient(264deg, #085fc6 10.52%, #389df6 100.94%);
+    }
+
+    .border-gradient {
+        background: linear-gradient(180deg, #3189d6 0%, #89c55a 100%);
+    }
+
+    .btn {
+        @apply font-semibold my-4 py-4 px-8 text-btn font-futura flex items-center justify-center gap-3 text-card bg-primary-blue border-2 border-primary-blue hover:bg-foreground hover:!border-card/5 hover:text-primary-blue rounded-lg;
+    }
+
+    .btn:hover > svg {
+        @apply fill-primary-blue;
+    }
+
+    .outline-btn:hover > svg {
+        @apply stroke-primary-blue;
+    }
+
+    input, textarea {
+        @apply outline-primary-blue
+    }
+}
+
+/* body {
+    --bg-1: rgb(31, 31, 36);
+    --bg-2: rgb(49, 51, 57);
+    --bg-3: rgb(20, 20, 25);
+    --fg-1: rgb(255, 255, 255);
+    --fg-2: rgb(227, 229, 236);
+    --link: hsl(194 34.9% 70.2%);
+    --link-hover: hsl(194 34.9% 90.2%);
+    --link-active: hsl(194 34.9% 60.2%);
+    --body-size: 1200px;
+
+    margin: 0;
+    background-color: var(--bg-2);
+    font-family: 'Poppins';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 600;
+    color: var(--fg-1);
+}
+
+p {
+    color: var(--fg-2);
+}
+
+a {
+    color: var(--link);
+}
+
+a:hover {
+    color: var(--link-hover);
+}
+
+a:active {
+    color: var(--link-active);
+} */
